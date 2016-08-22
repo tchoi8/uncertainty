@@ -1,12 +1,13 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background(0, 0, 255);
 }
 
 function draw() {
-  background(0, 0, 255);
   fill(255, 255, 0);
-  textAlign(CENTER);
-  textSize(150);
-  textStyle(BOLD);
-  text("OOF", width / 2, height / 2);
+  textAlign(LEFT);
+  textSize(70);
+  textStyle(NORMAL);
+  text("우프", width / 2, height / 2);
+   
 }

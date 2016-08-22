@@ -1,5 +1,4 @@
-var value = 0;
-var lastkey = 0;
+var 입력 = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -8,13 +7,13 @@ function setup() {
 function draw() {
   fill(230);
   noStroke();
-  rect(25, 25, width, height);
-  fill(value);
+  rect(100, 100, windowWidth, windowHeight);
+  fill(0);
   textSize(200);
-  text(lastkey, width / 2, height / 2);
+  text(입력, windowWidth / 2, windowHeight / 2);
 }
 
 function keyTyped() {
  
-  lastkey = key;
+  입력 = key;
 }
