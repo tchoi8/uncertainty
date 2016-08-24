@@ -2,6 +2,7 @@ var x1,y1,x2,y2;
 var x= 100;
 var y= 200;
 var i= 0;
+var o= 0;
 var j =0;
 var i2=0;
 function setup() {
@@ -16,9 +17,11 @@ function draw() {
 
  
   
-  장소(400,100,600,100,50);
+  장소(400,100,600,100,20);
  
-  장소2(300,200,600,200,0.25);  
+  장소2(300,200,600,200,0.11);  
+  
+  장소(200,400,800,300,20);  
  
   
 } 
@@ -44,18 +47,20 @@ point(x2,y2);
   }
 var incre_x = map(i,0,100,x1,x2);
  
+
+ if (o<=100){
+    o = o+1;
+  }else{
+    o= 0;
+  }
+var incre_y = map(o,0,100,y1,y2);
+ 
+
  noStroke();
   fill(155,155,0);
-  ellipse(incre_x,y1,10,10);
+  ellipse(incre_x,incre_y,10,10);
 
-  if (j<=100){
-    j = j+.1;
-  }else{
-    j= 0;
-  }
-  var incre_x2 = map(j, 0, 100, x1, x2);
-
-      ellipse(incre_x2, y1, 20, 20);
+ 
    
 }
 
@@ -83,4 +88,14 @@ var incre_x = map(i2,0,100,x1,x2);
   noStroke();
   fill(155,155,0);
   ellipse(incre_x,y1,10,10);
+
+
+  if (j<=100){
+    j = j+.1;
+  }else{
+    j= 0;
+  }
+  var incre_x2 = map(j, 0, 100, x1, x2);
+
+      ellipse(incre_x2, y1, 20, 20);
 }

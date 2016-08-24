@@ -1,36 +1,43 @@
-var x1,y1,x2,y2
-// 좌표 변수? 
+ var 집x, 집y, 학교x, 학교y;
+// 집의 x,y 좌표 변수, 학교의 x,y 좌표 변수를 선언합니다. 
 
-x1 = 100;
-y1 = 500;
-//첫 번째 좌표
+ function setup() {
 
-x2 = 500;
-y2 = 100;
-//두 번째 좌표
+       createCanvas(windowWidth, windowHeight);
+       background(255);
+ }
 
-function setup() {
+ function draw() {
 
-createCanvas(windowWidth,windowHeight);
-background(255);
-}
+       집x = windowWidth/4;
+       집y = windowHeight/2;
+//집의 상대적 위치 
 
-function draw() {
-noStroke();
-textSize(30);
-text("집",x1-10,y1-20);
-stroke(255,0,0);
-strokeWeight(3);
-line(x1,y1,x2,y2);
+       학교x = windowWidth/2;
+       학교y = windowHeight/4;
+//학교의 상대적 위치
+       
+      stroke(100);
+       strokeWeight(20);
+//점의 색과 두꼐
+
+       point(집x, 집y);
+//집의 상대적 위치에 점을 찍는다 
+       point(학교x, 학교y);
+//학교의 상대적 위치에 점을 찍는다 
 
 
-noStroke();
-textSize(30);
-text("불확실한 학교",x2-10,y2-20);
-stroke(100);
-strokeWeight(10);
-point(x1,y1);
-point(x2,y2);
-//포인트 그리기 
-  
-} 
+       stroke(100);
+       strokeWeight(5);
+       line(집x,집y,학교x,학교y);
+//선의 색과 두꼐, 그리고 시작점과 끝나는 점을 지정합니다. 
+   
+
+       noStroke();
+       textSize(25);
+       text("불확실한 학교", 학교x - 10, 학교y - 20);
+       text("집",집x - 10,집y - 20); 
+//각 좌표에서 10픽셀을 뺀 위치에 좌표의 이름을 표시합니다.
+
+ 
+ }
