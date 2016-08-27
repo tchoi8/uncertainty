@@ -24,7 +24,7 @@ var 간격 = 100;
   function 시각화(이름, 스티커갯수){
      //설문조사 
         높이 = 높이 + 간격;
-        fill(10);
+        fill('black');
         text(이름, 150, 높이 + 50);
         for (i = 0; i < 스티커갯수; i = i + 1) {
               fill('grey');
